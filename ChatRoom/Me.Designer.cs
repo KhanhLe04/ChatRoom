@@ -1,6 +1,6 @@
 ﻿namespace LAB3.BAI6
 {
-    partial class Lab03_Bai06_Me
+    partial class Me
     {
         /// <summary>
         /// Required designer variable.
@@ -82,7 +82,7 @@
             labelInfo.TabIndex = 4;
             labelInfo.Text = "labelInfo";
             // 
-            // Lab03_Bai06_Me
+            // Me
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -92,7 +92,7 @@
             Controls.Add(btnSend);
             Controls.Add(txtMessage);
             Controls.Add(listMessage);
-            Name = "Lab03_Bai06_Me";
+            Name = "Me";
             Text = "Me";
             Load += Lab03_Bai06_Me_Load;
             ResumeLayout(false);

@@ -16,9 +16,9 @@ using System.Security.Cryptography;
 
 namespace LAB3
 {
-    public partial class Lab03_Bai06_Server : Form
+    public partial class Server : Form
     {
-        public Lab03_Bai06_Server()
+        public Server()
         {
             InitializeComponent();
         }

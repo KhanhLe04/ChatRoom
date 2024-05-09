@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace LAB3
 {
-    public partial class Lab03_Bai06_Client : Form
+    public partial class Client : Form
     {
-        public Lab03_Bai06_Client()
+        public Client()
         {
             InitializeComponent();
         }
@@ -179,7 +179,7 @@ namespace LAB3
                 string thiername = listParticipants.Items[index].Text;
                 BeginInvoke(new MethodInvoker(() =>
                 {
-                    Lab03_Bai06_Me meForm = new Lab03_Bai06_Me(thiername, txtName.Text, tcpClient);
+                    Me meForm = new Me(thiername, txtName.Text, tcpClient);
                     meForm.Show();
 
                 }));

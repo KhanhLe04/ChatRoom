@@ -14,9 +14,9 @@ using System.Drawing.Text;
 
 namespace LAB3.BAI6
 {
-    public partial class Lab03_Bai06_Me : Form
+    public partial class Me : Form
     {
-        public Lab03_Bai06_Me()
+        public Me()
         {
             InitializeComponent();
             CheckForIllegalCrossThreadCalls = false;
@@ -25,7 +25,7 @@ namespace LAB3.BAI6
             clientThread.Start();
 
         }
-        public Lab03_Bai06_Me(string sentThierName, string sentMyName, TcpClient sentTcpClient)
+        public Me(string sentThierName, string sentMyName, TcpClient sentTcpClient)
         {
             InitializeComponent();
             tcpClient = sentTcpClient;

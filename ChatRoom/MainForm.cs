@@ -11,34 +11,29 @@ using System.Windows.Forms;
 
 namespace LAB3
 {
-    public partial class Lab03_Bai06 : Form
+    public partial class MainForm : Form
     {
-        public Lab03_Bai06()
+        public MainForm()
         {
             InitializeComponent();
         }
 
         private void btnClient_Click(object sender, EventArgs e)
         {
-            Lab03_Bai06_Client client = new Lab03_Bai06_Client();
+            Client client = new Client();
             client.Show();
 
         }
 
         private void btnServer_Click(object sender, EventArgs e)
         {
-            Lab03_Bai06_Server server = new Lab03_Bai06_Server();
+            Server server = new Server();
             server.Show();
         }
 
-        private void Lab03_Bai06_Load(object sender, EventArgs e)
+        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void Lab03_Bai06_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Lab03_Bai06 mainform = new Lab03_Bai06();
+            MainForm mainform = new MainForm();
             mainform.Show();
         }
     }

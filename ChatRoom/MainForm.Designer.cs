@@ -1,6 +1,6 @@
 ﻿namespace LAB3
 {
-    partial class Lab03_Bai06
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -63,7 +63,7 @@
             label1.TabIndex = 2;
             label1.Text = "Chat Room";
             // 
-            // Lab03_Bai06
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -71,10 +71,9 @@
             Controls.Add(label1);
             Controls.Add(btnServer);
             Controls.Add(btnClient);
-            Name = "Lab03_Bai06";
+            Name = "MainForm";
             Text = "BÀI 6";
-            FormClosed += Lab03_Bai06_FormClosed;
-            Load += Lab03_Bai06_Load;
+            FormClosed += MainForm_FormClosed;
             ResumeLayout(false);
             PerformLayout();
         }

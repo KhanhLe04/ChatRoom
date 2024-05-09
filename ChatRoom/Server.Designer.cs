@@ -1,6 +1,6 @@
 ﻿namespace LAB3
 {
-    partial class Lab03_Bai06_Server
+    partial class Server
     {
         /// <summary>
         /// Required designer variable.
@@ -51,14 +51,14 @@
             listMessage.UseCompatibleStateImageBehavior = false;
             listMessage.View = View.List;
             // 
-            // Lab03_Bai06_Server
+            // Server
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(704, 419);
             Controls.Add(listMessage);
             Controls.Add(btnListen);
-            Name = "Lab03_Bai06_Server";
+            Name = "Server";
             Text = "Chat Server";
             ResumeLayout(false);
         }
