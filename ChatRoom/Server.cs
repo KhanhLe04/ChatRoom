@@ -157,10 +157,11 @@ namespace LAB3
             }
             if (mess.StartsWith("(PrivateMess)"))
             {
+                //(PrivateMess)|{nguoigui}|{tinnhan}|{nguoinhan}
                 string[] messSplit = mess.Split('|');
-                string thiername = messSplit[1].Trim();
-                string message = $"Private|{username}|{messSplit[2]}";
-                string message1 = $"ToForm|{username}|{messSplit[2]}";
+                string thiername = messSplit[3].Trim();
+                string message = $"Private|{messSplit[1]}|{messSplit[2]}";
+                string message1 = $"ToForm|{messSplit[1]}|{messSplit[2]}|{messSplit[3]}";
 
                 foreach (string user in dic_clients.Keys)
                 {

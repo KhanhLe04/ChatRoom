@@ -19,10 +19,7 @@ namespace LAB3.BAI6
         public Me()
         {
             InitializeComponent();
-            CheckForIllegalCrossThreadCalls = false;
-            clientThread = new Thread(Receive);
-            clientThread.IsBackground = true;
-            clientThread.Start();
+            
 
         }
         public Me(string sentThierName, string sentMyName, TcpClient sentTcpClient)
@@ -31,10 +28,7 @@ namespace LAB3.BAI6
             tcpClient = sentTcpClient;
             thiername = sentThierName;
             myname = sentMyName;
-            CheckForIllegalCrossThreadCalls = false;
-            clientThread = new Thread(Receive);
-            clientThread.IsBackground = true;
-            clientThread.Start();
+            
         }
         Thread clientThread;
         bool connecting = true;
@@ -67,7 +61,7 @@ namespace LAB3.BAI6
         {
             UpdateChatHistorySafeCall("Tôi", txtMessage.Text);
             NetworkStream net_stream = tcpClient.GetStream();
-            byte[] message = Encoding.UTF8.GetBytes($"(PrivateMess)|{thiername}|{txtMessage.Text}");
+            byte[] message = Encoding.UTF8.GetBytes($"(PrivateMess)|{myname}|{txtMessage.Text}|{thiername}");
             net_stream.Write(message, 0, message.Length);
             net_stream.Flush();
             txtMessage.Text = String.Empty;
@@ -89,7 +83,11 @@ namespace LAB3.BAI6
                         string[] messageParts = mess.Split('|');
                         string sender = messageParts[1];
                         string message = messageParts[2];
-                        UpdateChatHistorySafeCall(sender, message);
+                        if (messageParts[1] == thiername && messageParts[3] == myname)
+                        {
+                            UpdateChatHistorySafeCall(sender, message);
+                        }
+                        
                     }
                 }
             }
@@ -106,7 +104,10 @@ namespace LAB3.BAI6
         private void Lab03_Bai06_Me_Load(object sender, EventArgs e)
         {
             labelInfo.Text = $"{myname} to {thiername}";
-
+            CheckForIllegalCrossThreadCalls = false;
+            clientThread = new Thread(Receive);
+            clientThread.IsBackground = true;
+            clientThread.Start();
 
         }
 

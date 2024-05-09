@@ -180,6 +180,7 @@ namespace LAB3
                 BeginInvoke(new MethodInvoker(() =>
                 {
                     Me meForm = new Me(thiername, txtName.Text, tcpClient);
+                    meForm.Name = $"{txtName.Text.Trim()}to{thiername}";
                     meForm.Show();
 
                 }));
